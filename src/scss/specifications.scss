@@ -398,9 +398,11 @@ h3,
 .text-uppercase {
   text-transform: uppercase;
 }
+
 .mt-10 {
   margin-top: 100px;
 }
+
 .mb-6 {
   margin-bottom: 60px;
 }
@@ -408,10 +410,14 @@ h3,
 .mt-6 {
   margin-top: 60px;
 }
+.mb-3 {
+  margin-bottom: 30px;
+}
 
 .mb-4 {
   margin-bottom: 40px;
 }
+
 .py--lg {
   padding-top: 130px;
   padding-bottom: 130px;
@@ -450,19 +456,22 @@ h3,
 
   .contentImg {
     grid-column: 7 span;
+
     img {
       width: 100%;
       height: auto;
-      object-fit: cover;    
+      object-fit: cover;
       object-position: center;
-      box-shadow: 0px 2px 7px 0px rgba(144, 144, 144, 0.25);      
-    }   
+      box-shadow: 0px 2px 7px 0px rgba(144, 144, 144, 0.25);
+    }
   }
+
   .content {
     grid-column: 8 span;
     font-size: 18px;
     color: #000;
   }
+
   .contentImgTitle {
     margin-top: 15px;
     font-family: var(--font-family-second);
@@ -473,4 +482,28 @@ h3,
     margin-right: auto;
   }
 
+}
+
+.navPage {
+  width: 30px;
+  height: 28px;
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  &.disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+  &:hover {
+    opacity: .5;
+  }
+
+  &Prev {
+    background-image: url('@img/icons/page-prev.svg');
+  }
+
+  &Next {
+    background-image: url('@img/icons/page-next.svg');
+  }
 }

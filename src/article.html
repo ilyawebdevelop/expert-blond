@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title":"Jak dbać o włosy farbowane"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			@@include('html/article/intro.html',{
+				"title":"Jak dbać o włosy farbowane",
+				"img": "@img/admin/slider/image-1.png",
+				"full-grad": "",
+				"title-opacity": "",
+			})
+			@@include('html/article/content.html',{})		
+		</main>
+		@@include('html/footer.html',{})
+		@@include('html/modal.html',{})
+	</div>
+
+	<script src="js/app.min.js"></script>
+
+
+
+</body>
+
+</html>

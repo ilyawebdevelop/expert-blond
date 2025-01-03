@@ -1,0 +1,38 @@
+.articleBack {
+  color: rgba(57, 48, 44, 0.60);
+  font-size: 16px;
+  margin-bottom: 60px;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  &:hover {
+    color: rgba(57, 48, 44, 1);
+    svg {
+      stroke: rgba(57, 48, 44, 1);
+    }
+  }
+
+  svg {
+    stroke: rgba(57, 48, 44, 0.60);
+    width: 14px;
+    height: 14px;
+    stroke-width: 2px;
+  }
+}
+.articleContent {
+  padding: 60px;
+  border-radius: 30px;
+  background: #908078;  
+}
+.relatedArticle {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  .blogItem{
+    margin-bottom: 0;
+    grid-column: 6 span;
+    min-height: 350px;
+    padding-bottom: 0;
+    justify-content: center;
+  }
+}

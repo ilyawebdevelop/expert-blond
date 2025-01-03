@@ -1,0 +1,51 @@
+.contacts {
+  &W {
+    border-radius: 30px;
+    background: #D4C4B7;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    overflow: hidden;
+  }
+
+  &Content {
+    padding: 30px;
+    border-right: 24px solid #BABABA;
+    grid-column: 6 span;
+
+    .h2 {
+      margin-bottom: 45px;
+    }
+
+    .h3 {
+      margin-bottom: 45px;
+      font-size: 36px;
+      text-transform: unset;
+    }
+  }
+
+  &Iframe {
+    width: 100%;
+    min-height: 740px;
+    grid-column: 6 span;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.contactsWork {
+  font-weight: 500; 
+  max-width: 305px;
+
+  &Col {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 10px;
+    span {
+      grid-column: 6 span;
+    }
+   
+  }
+}

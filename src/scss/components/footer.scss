@@ -1,0 +1,79 @@
+// Footer
+.footer {
+  background-color: #F1F1F1;
+
+  &T {
+    border-bottom: 1px solid #39302C;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &B {
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    &W {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 50px;
+    }
+
+    &L {
+      display: flex;
+      column-gap: 48px;
+    }
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  .nav {
+    &Title {
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      li {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        a {
+          font-size: 16px;
+          color: rgba(57, 48, 44, 0.70);
+          font-weight: 500;
+          text-transform: uppercase;
+          display: flex;
+          column-gap: 10px;
+
+          &:hover {
+            color: rgba(57, 48, 44, 1);
+          }
+        }
+      }
+    }
+  }
+
+  &Phone {
+    padding-left: 30px;
+    font-size: 26px;
+    color: #39302C;
+    font-weight: 600;
+    margin-top: 58px;
+    display: block;
+    background: url('@img/icons/phone.svg') no-repeat left top 6px / 23px;
+    &:hover {
+      opacity: .85;
+    }
+  }
+}

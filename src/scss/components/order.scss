@@ -1,0 +1,36 @@
+.order {
+  &W {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+  }
+
+  &Content {
+    width: 100%;
+    background-color: #DED3CE;
+    border-radius: 30px;
+    padding: 60px;
+    grid-column: 6 span;
+  }
+
+  &Img {
+    grid-column: 6 span;
+
+    img {
+      width: 795px;
+      height: 738px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 30px;
+    }
+  }
+  &Title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &Form {
+    max-width: 556px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,38 @@
+.products {
+  background-color: #fff;
+  .sectHead {
+    margin-bottom: 60px;
+  }
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    max-width: 1030px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &Card {
+    grid-column: 4 span;
+    &Img {
+      &:hover {
+        opacity: .9;
+      }
+      img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &Title {
+      margin-top: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-family: var(--font-family-second);
+      display: block;
+      &:hover {
+       opacity: .9;
+      }
+    }
+  }
+}

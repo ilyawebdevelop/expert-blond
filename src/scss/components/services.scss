@@ -113,6 +113,20 @@
     column-gap: 30px;
     row-gap: 40px;
   }
+  .navArrow  {
+    display: none;
+    @media(max-width: 991px){
+      display: flex;
+    }
+  }
+  &.serviceSmSliderFour {
+    .serviceSlide{
+      grid-column: 3 span;
+    }
+    .servicesCard::before {
+      display: none;
+    }
+  }
 }
 .serviceMainSlider{
   .swiper-wrapper {

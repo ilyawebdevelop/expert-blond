@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/head.html',{
-"title":"Услуга"
+"title":"Pielęgnacja salonu"
 })
 
 <body>
@@ -9,9 +9,13 @@
 	<div class="wrapper">
 		@@include('html/header.html',{})
 		<main class="main">
-			@@include('html/service/intro.html',{})
-			@@include('html/service/about.html',{})
-			@@include('html/service/related.html',{})
+			@@include('html/service/intro.html',{
+				"title":"Pielęgnacja salonu",
+				"img": "@img/admin/services/image-7.jpeg",
+				"full-grad": "",
+				"title-opacity": "",
+			})
+			@@include('html/service/dom-peleg/about.html',{})		
 		</main>
 		@@include('html/footer.html',{})
 		@@include('html/modal.html',{})

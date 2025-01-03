@@ -24,4 +24,9 @@
     max-height: 740px;
     object-fit: cover;
   }
+  &.service-about {
+    .aboutContent {
+      padding: 60px 50px;
+    }
+  }
 }

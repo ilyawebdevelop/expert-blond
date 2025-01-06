@@ -3800,6 +3800,11 @@ h3,
   padding: 20px;
   border-radius: 20px;
 }
+@media (max-width: 1400px) {
+  .serviceSmSlider .servicesCard {
+    height: 250px;
+  }
+}
 @media (max-width: 991px) {
   .serviceSmSlider .servicesCard {
     justify-content: center;

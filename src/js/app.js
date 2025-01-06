@@ -38,7 +38,7 @@ $(".mainSlider").each(function () {
 });
 
 if (mediaQuery991.matches) {
-  // Инициализация слайдера se
+  // Инициализация слайдера serviceSmSlider
   document.querySelectorAll('.serviceSmSlider').forEach(n => {
     const mySwiperServiceSm = new Swiper(n, {
       slidesPerView: 1,
@@ -50,6 +50,20 @@ if (mediaQuery991.matches) {
       },
     });
   });
+
+  // Инициализация слайдера serviceMainSlider
+  document.querySelectorAll('.serviceMainSlider').forEach(n => {
+    const mySwiperServiceMain = new Swiper(n, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 600,
+      navigation: {
+        prevEl: n.querySelector('.navArrowPrev'),
+        nextEl: n.querySelector('.navArrowNext'),
+      },
+    });
+  });
+
 }
 
 function findOffset(element) {
@@ -121,3 +135,35 @@ window.onload = function () {
 
 };
 
+
+// Burger
+const btnMenu = document.querySelector('#toggle');
+const menu = document.querySelector('.headerMenu');
+const bodyEl = document.querySelector('body');
+const btnClose = document.querySelector('.headerNavCloseBtn');
+
+const toggleMenu = function () {
+  menu.classList.toggle('active');
+}
+const toggleBurger = function () {
+  btnMenu.classList.toggle('active');
+}
+const bodyOverflow = function () {
+  bodyEl.classList.toggle('hidden');
+  bodyEl.classList.toggle('hide-scrollbar');
+}
+const menuClose = function () {
+  toggleBurger();
+  bodyOverflow();
+  toggleMenu();
+}
+btnMenu?.addEventListener('click', function (e) {
+  e.stopPropagation();
+  toggleMenu();
+  toggleBurger();
+  bodyOverflow();
+});
+
+btnClose?.addEventListener('click', function (e) {
+  menuClose();
+});

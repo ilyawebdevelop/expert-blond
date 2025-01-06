@@ -12,15 +12,26 @@
     background-position: center;
     width: 27px;
     height: 47px;
+    @media(max-width: 991px){
+      width: 19px;
+      height: 33px;
+      background-size: 19px;
+    }
 
     &Prev {
       left: 30px;
       background-image: url('@img/icons/slider-prev.svg');
+      @media(max-width: 420px){
+        left: 20px;
+      }
     }
 
     &Next {
       right: 30px;
       background-image: url('@img/icons/slider-next.svg');
+      @media(max-width: 420px){
+        right: 20px;
+      }
     }
   }
   .swiper-pagination{
@@ -39,14 +50,52 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 60px 60px 130px;
+  @media(max-width: 1400px){
+    min-height: 600px;
+  }
+  @media(max-width: 991px){
+    justify-content: center;
+    padding-bottom: 60px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  @media(max-width: 767px){
+    min-height: 400px;
+  }
+  @media(max-width: 575px){
+    border-radius: 0;
+  }
+  @media(max-width: 420px){
+    padding-left: 50px;
+    padding-right: 50px;
+  }
   &Title {
     text-align: center;
     font-family: var(--font-family-second);
     color: #fff;
     font-size: 40px;
+    line-height: normal;
     text-transform: uppercase;
+    @media(max-width: 991px){
+      font-size: 36px;     
+    }
+    @media(max-width: 420px){
+      font-size: 30px;
+    }
   }
   &:hover {
     opacity: .9;
+  }
+}
+.mainSliderSect{
+  @media(max-width: 575px){
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .container {
+    @media(max-width: 575px){
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

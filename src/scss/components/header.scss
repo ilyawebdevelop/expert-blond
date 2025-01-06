@@ -8,12 +8,21 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  &Logo {
+  .logo {
     &:hover {
       opacity: .9;
     }
+
     img {
       width: 270px;
+
+      @media(max-width: 1199px) {
+        width: 230px;
+      }
+
+      @media(max-width: 991px) {
+        width: 190px;
+      }
     }
   }
 
@@ -36,6 +45,18 @@
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+
+    .headerLang {
+      @media(max-width: 991px) {
+        display: none;
+      }
+    }
+
+    .nav {
+      @media(max-width: 991px) {
+        display: none;
+      }
+    }
   }
 
   .nav {
@@ -50,6 +71,7 @@
           font-weight: 600;
           border-bottom: 1px solid transparent;
           transition: border-color .2s linear;
+
           &:hover {
             border-color: #fff;
           }
@@ -61,6 +83,7 @@
   &Lang {
     display: flex;
     column-gap: 10px;
+
     a {
       color: var(--light);
       text-transform: uppercase;
@@ -68,25 +91,104 @@
       font-weight: 600;
       border-bottom: 1px solid transparent;
       transition: border-color .2s linear;
+
       &:hover {
         border-color: #fff;
       }
     }
   }
+
   &.fixed {
     background-color: var(--main-color);
     top: 0;
     transition: all .2s linear;
   }
+
+  .headerLNav {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+
+
+    ul {
+      @media(max-width: 991px) {
+        display: none;
+      }
+    }
+
+  }
 }
 
-.headerLNav {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 0px;
-  flex: 1 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+
+.headerMenu {
+  display: none;
+
+  @media(max-width: 991px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &.active {
+    display: block;
+    -webkit-animation: shows 0.2s;
+    animation: shows 0.2s;
+  }
+
+  .logo {
+    img {
+      width: 188px;
+    }
+  }
+
+  .nav {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    text-align: center;
+  
+
+    ul {
+      li {
+        margin-bottom: 15px;
+
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .headerMenuNav {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .hamburger {
+    background-color: #39302C;
+  }
+
+  .headerLang {
+    justify-content: center;
+
+    a {
+      color: var(--main-color);
+    }
+  }
 }

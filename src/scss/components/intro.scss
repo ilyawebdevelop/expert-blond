@@ -24,6 +24,9 @@
     top: 0;
     object-fit: cover;
     height: 700px;
+    @media(max-width: 991px){
+      height: 100%;
+    }
 
     &::-webkit-media-controls {
       display: none;
@@ -41,26 +44,49 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 30px;
+    @media(max-width: 991px){
+      min-height: unset;
+      padding-bottom: 90px;
+      padding-top: 130px;
+    }
+    @media(max-width: 575px){
+      padding-bottom: 80px;
+    }
   }
 
   &Title {
     max-width: 1215px;
     color: var(--light);
     font-size: 100px;
+    line-height: normal;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     text-transform: uppercase;
     font-family: var(--font-family-second);
     margin-bottom: 120px;
+    @media(max-width: 991px){
+      font-size: 60px;
+    }
+    @media(max-width: 575px){
+      margin-bottom: 100px;
+    }
     &.title-opacity {
       opacity: .6;
+      @media(max-width: 991px){
+        opacity: 1;
+        color: #fff;
+      }
     }
   }
 
   &Footer {
     display: flex;
     align-items: flex-end;
+    @media(max-width: 991px){
+      flex-direction: column;
+      align-items: center;
+    }
 
     ul {
       -webkit-box-flex: 1;
@@ -70,6 +96,12 @@
       display: -ms-flexbox;
       display: flex;
       flex-direction: column;
+      @media(max-width: 991px){
+        margin-bottom: 100px;
+      }
+      @media(max-width: 575px){
+        margin-bottom: 80px;
+      }
 
       li {
         color: var(--light);
@@ -77,6 +109,9 @@
         display: flex;
         align-items: center;
         column-gap: 15px;
+        @media(max-width: 1199px){
+          font-size: 20px;
+        }
 
         &::before {
           content: '';
@@ -122,12 +157,21 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  @media(max-width: 991px){
+    display: none;
+  }
 }
 
 .introService {
   .h1 {
     margin-bottom: 200px;
     margin-top: 250px;
+    @media(max-width: 991px){
+      font-size: 41px;
+      line-height: normal;
+      margin-bottom: 120px;
+      margin-top: 120px;
+    }
   }
 
   .button {

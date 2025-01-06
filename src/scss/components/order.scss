@@ -1,4 +1,15 @@
 .order {
+  @media(max-width: 575px){
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #fff;
+  }
+  .container {
+    @media(max-width: 575px){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   &W {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -11,10 +22,26 @@
     border-radius: 30px;
     padding: 60px;
     grid-column: 6 span;
+    @media(max-width: 1400px){
+      padding: 50px 60px;
+    }
+    @media(max-width: 1199px){
+      grid-column: 12 span;
+    }
+    // @media(max-width: 991px){
+    //   padding: 60px 15px;
+    // }
+    @media(max-width: 575px){
+      border-radius: 0;
+      padding: 60px 15px;
+    }
   }
 
   &Img {
     grid-column: 6 span;
+    @media(max-width: 1199px){
+      display: none;
+    }
 
     img {
       width: 795px;
@@ -27,10 +54,19 @@
   &Title {
     text-align: center;
     margin-bottom: 30px;
+    @media(max-width: 1679px){
+      font-size: 33px;
+    }
   }
   &Form {
     max-width: 556px;
     margin-left: auto;
     margin-right: auto;
+    @media(max-width: 575px){
+      max-width: 300px;
+    }
+    @media(max-width: 349px){
+      max-width: 100%;
+    }
   }
 }

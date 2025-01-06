@@ -1,8 +1,19 @@
 .products {
   background-color: #fff;
+
   .sectHead {
     margin-bottom: 60px;
+
+    @media(max-width: 1199px) {
+      margin-bottom: 50px;
+    }
+
+    @media(max-width: 575px) {
+      text-align: center;
+      justify-content: center;
+    }
   }
+
   &Grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -10,19 +21,53 @@
     max-width: 1030px;
     margin-left: auto;
     margin-right: auto;
+
+    @media(max-width: 767px) {
+      row-gap: 50px;
+    }
   }
+
   &Card {
     grid-column: 4 span;
+
+    @media(max-width: 767px) {
+      grid-column: 6 span;
+    }
+
+    @media(max-width: 575px) {
+      grid-column: 12 span;
+    }
+
     &Img {
       &:hover {
         opacity: .9;
       }
+
       img {
         height: 400px;
         width: 100%;
         object-fit: cover;
+
+        @media(max-width: 991px) {
+          height: 300px;
+        }
+
+        @media(max-width: 575px) {
+          height: 85vw;
+        }
+
+        @media(max-width: 420px) {
+          width: 300px;
+          height: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media(max-width: 349px){
+          width: 100%;
+        }
       }
     }
+
     &Title {
       margin-top: 30px;
       text-align: center;
@@ -30,8 +75,9 @@
       font-size: 18px;
       font-family: var(--font-family-second);
       display: block;
+
       &:hover {
-       opacity: .9;
+        opacity: .9;
       }
     }
   }

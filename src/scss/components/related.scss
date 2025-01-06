@@ -1,10 +1,52 @@
 .related {
+  @media(max-width: 575px) {
+    padding-bottom: 0;
+  }
+
+  .container {
+    @media(max-width: 575px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   &W {
     border-radius: 30px;
-    background: #908078; 
+    background: #908078;
     padding: 60px;
+
+    @media(max-width: 575px) {
+      border-radius: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 0;
+    }
+
+    &-bg-sm-none {
+      @media(max-width: 575px) {
+        background-color: transparent;
+      }
+    }
   }
+
   &Title {
     margin-bottom: 30px;
+
+    @media(max-width: 991px) {
+      text-align: center;
+    }
+  }
+
+  .content {
+    @media(max-width: 575px) {
+      width: 330px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+    }
+
+    @media(max-width: 360px) {
+      width: 100%;
+    }
   }
 }

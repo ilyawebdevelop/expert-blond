@@ -48,11 +48,53 @@
           <a href="#">en</a>
           <a href="#">ru</a>
         </div>
+        <div class="hamburger" id="toggle">
+          <div class="top-bun"></div>
+          <div class="meat"></div>
+          <div class="bottom-bun"></div>
+        </div><!-- /Hamburger Menu -->
 
       </div>
+
     </div>
   </div>
 </header>
+<div class="headerMenu">
+  <div class="container">
+    <div class="headerW">
+      <div class="nav"></div>
+      <a href="#" class="logo">
+        <img src="img/admin/logo/logo-black.svg" alt="logo">
+      </a>
+      <div class="headerR">
+        <div class="hamburger headerNavCloseBtn">
+          <img src="img/icons/close.svg" alt="icon">
+        </div>
+      </div>
+
+    </div>
+    <nav class="nav headerMenuNav">
+      <ul>
+        <li>
+          <a href="#">O nas</a>
+        </li>
+        <li>
+          <a href="#">Usługi i ceny</a>
+        </li>
+        <li>
+          <a href="#"> Pielęgnacja salonu </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="headerLang">
+      <a href="#">pl</a>
+      <a href="#">en</a>
+      <a href="#">ru</a>
+    </div>
+
+
+  </div>
+</div>
 		<main class="main">		
 			<section class="intro sect">
   <video class="introVideo" autoplay loop muted id="player" controls="false" width="640" height="360"
@@ -100,7 +142,7 @@
   <div class="container">
     <div class="aboutW">
       <div class="aboutContent">
-        <h2 class="h2">
+        <h2 class="h2 title-lg">
           Expert Blond
         </h2>
         <div class="content">
@@ -122,6 +164,11 @@
         </button>
       </div>
       <img src="img/admin/about/image-1.jpg" alt="image" class="aboutImg">
+      <div class="title-sm">
+        <div class="h2">
+          Expert Blond
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -168,16 +215,9 @@
           </div>
 
         </div>
+        <button class="navArrow navArrowPrev"></button>
+        <button class="navArrow navArrowNext"></button>
       </div>
-
-      <!-- <div class="servicesGrid">
-
-
-
-
-
-
-      </div> -->
 
       <button class="servicesBtn button button--transparent">
         Wszystkie usługi
@@ -211,7 +251,7 @@
       <h2 class="h2">
         Pielęgnacja salonu
       </h2>
-      <button class="button button--black-transparent">
+      <button class="button button--black-transparent productsBtnLg">
         Więcej informacji
         <svg>
           <use xlink:href="img/icons/icons.svg#arrow-btn-right"></use>
@@ -247,6 +287,13 @@
       </div>
 
     </div>
+
+    <button class="button button--black-transparent productsBtnSm">
+      Więcej informacji
+      <svg>
+        <use xlink:href="img/icons/icons.svg#arrow-btn-right"></use>
+      </svg>
+    </button>
 
   </div>
 </section>
@@ -291,7 +338,7 @@
     </div>
   </div>
 </section>
-			<section class="sliderSect sect">
+			<section class="sliderSect mainSliderSect sect">
   <div class="container">
     <div class="swiper mainSlider">
       <div class="swiper-wrapper">
